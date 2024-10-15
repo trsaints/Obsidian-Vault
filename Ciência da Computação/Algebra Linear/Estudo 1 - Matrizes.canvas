@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"9efc94572ecc934c","type":"text","text":"# Matrizes\nUma matriz de ordem m por n é um quadro de `m * n` números, dispostos em `m` linhas e `n` colunas.\n\nSe $$m = n$$, a matriz é retangular.\n\nSe $$m = n$$, a matriz é quadrada.","x":-800,"y":-480,"width":360,"height":412},
+		{"id":"008dd606a17e97fd","x":-340,"y":-420,"width":250,"height":352,"type":"text","text":"Cada elemento `a` de uma matriz `A` tem dois índices, i e j.\n\n`a(i,j)` -> i: linha, j: coluna\n\n\n$$\n\\begin{matrix}\na_{1,1} & a_{1,2} & a_{1,3} \\\\\na_{2,1} & a_{2,2} & a_{2,3} \\\\\na_{3,1} & a_{3,2} & a_{3,3} \\\\\n\\end{matrix}\n$$\n"},
+		{"id":"204607c483e0b60a","x":-720,"y":40,"width":250,"height":340,"type":"text","text":"Se a matriz tem 1 coluna, $$A_{m,1}$$, esta é chamada de matriz-coluna.\n\nSe a matriz tem 1 linha, \n$$A_{1,n}$$, esta é chamada de matriz/vetor-linha."}
+	],
+	"edges":[
+		{"id":"3d90020717d1c60f","fromNode":"9efc94572ecc934c","fromSide":"right","toNode":"008dd606a17e97fd","toSide":"left"},
+		{"id":"f92b95bdb9c22acf","fromNode":"008dd606a17e97fd","fromSide":"bottom","toNode":"204607c483e0b60a","toSide":"top"}
+	]
+}

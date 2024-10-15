@@ -1,0 +1,10 @@
+{
+	"nodes":[
+		{"id":"a12130897396fe16","type":"text","text":"\n| Aluno     |\n| --------- |\n| Matrícula |\n| Nome      |\n| Cargo     |\n| Login     |\n| Senha     |\n| Código    |\n","x":-420,"y":-40,"width":160,"height":260},
+		{"id":"b1102350709f8188","type":"text","text":"\n| Curso  |\n| ------ |\n| Código |\n| Nome   |\n","x":-160,"y":20,"width":145,"height":120},
+		{"id":"10ce682da6e052f4","type":"text","text":"# Modelo Lógico\n\nRepresentação conceitual, porém voltada a modelagem das reais estruturas de dados de um banco de dados .\n\nO tipo de modelagem lógica varia conforme a cardinalidade dos relacionamentos.\n\nUm caso em particular no modelo relacional é a cardinalidade (N:N). Nesse caso, _sempre existe uma tabela extra para o relacionamento, que irá conter um registro para estabelecer _","x":-420,"y":-480,"width":380,"height":400}
+	],
+	"edges":[
+		{"id":"57efb4e47df2ccd1","fromNode":"a12130897396fe16","fromSide":"right","toNode":"b1102350709f8188","toSide":"left","label":"1,N"}
+	]
+}
