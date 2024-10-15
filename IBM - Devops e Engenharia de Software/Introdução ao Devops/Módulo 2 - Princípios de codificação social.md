@@ -93,3 +93,11 @@ Assim, cada um desses serviços se mantém ativo de forma independente, permitin
 - **Modificar um serviço não requer alteração em outros serviços**: se for necessário escalar um serviço em específico, ou derrubá-lo, ou reconstruí-lo, os outros serviços não precisam passar pelo menos procedimento. Isso permite um controle granular que é dependente apenas da necessidade em específico de um serviço.
 
 Um detalhe importante é que, para abordar tal arquitetura de forma eficiente e robusta, o processo de DevOps deve pensar em esteiras de integração e entrega para cada um dos serviços.
+## Projetando Para o Fracasso
+
+Uma vez que a falha de um sistema é inevitável, o mesmo vale para microsserviços. Assim, todo o desenvolvimento de todos os serviços que englobam o produto final precisam ser desenvolvidos pensando nesse aspecto. Alguns padrões ou práticas auxiliam nesse processo, tornando as aplicações resistentes ou flexíveis a falhas que durem pouco:
+
+- __*Retry*__: para cada vez que um serviço falhar ao tentar se comunicar com outro serviço, o mesmo tenta novamente a comunicação. Entre cada falha, o tempo de espera para tentar novamente é aumentado, até que um certo limite seja alcançado e só assim encerrar a execução do processo.
+- __*Circuit Breaker*__: para evitar que um serviço indisponível torne todos os outros serviços indisponíveis, um fluxo alternativo é ativado e que sustenta a aplicação como um todo até que na próxima requisição, seja averiguado que o serviço em questão se tornou disponível novamente, retornando então ao fluxo normal.
+- __*Bulkhead*__: serviços indisponíveis são isolados e a responsabilidade dos mesmos é delegada a outro serviço do mesmo tipo
+- __Engenharia do Caos__: visa deliberadamente derrubar os serviços, sem critérios arbitrários, para averiguar como a aplicação se comporta, permitindo analisar mais friamente como projetar serviços mais robustos.
