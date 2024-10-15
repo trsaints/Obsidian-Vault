@@ -98,6 +98,19 @@ Um detalhe importante é que, para abordar tal arquitetura de forma eficiente e 
 Uma vez que a falha de um sistema é inevitável, o mesmo vale para microsserviços. Assim, todo o desenvolvimento de todos os serviços que englobam o produto final precisam ser desenvolvidos pensando nesse aspecto. Alguns padrões ou práticas auxiliam nesse processo, tornando as aplicações resistentes ou flexíveis a falhas que durem pouco:
 
 - __*Retry*__: para cada vez que um serviço falhar ao tentar se comunicar com outro serviço, o mesmo tenta novamente a comunicação. Entre cada falha, o tempo de espera para tentar novamente é aumentado, até que um certo limite seja alcançado e só assim encerrar a execução do processo.
-- __*Circuit Breaker*__: para evitar que um serviço indisponível torne todos os outros serviços indisponíveis, um fluxo alternativo é ativado e que sustenta a aplicação como um todo até que na próxima requisição, seja averiguado que o serviço em questão se tornou disponível novamente, retornando então ao fluxo normal.
-- __*Bulkhead*__: serviços indisponíveis são isolados e a responsabilidade dos mesmos é delegada a outro serviço do mesmo tipo
-- __Engenharia do Caos__: visa deliberadamente derrubar os serviços, sem critérios arbitrários, para averiguar como a aplicação se comporta, permitindo analisar mais friamente como projetar serviços mais robustos.
+- __*Circuit Breaker* (disjuntor)__ : para evitar que um serviço indisponível torne todos os outros serviços indisponíveis, um fluxo alternativo é ativado e que sustenta a aplicação como um todo até que na próxima requisição, seja averiguado que o serviço em questão se tornou disponível novamente, retornando então ao fluxo normal. Esse fluxo alternativo só é ativado após um certo limite de tentativas mal sucedidas for alcançado.
+- __*Bulkhead*__: serviços indisponíveis são isolados e a responsabilidade dos mesmos é delegada a outro serviço do mesmo tipo, permitindo que outros serviços não sejam afetados.
+- __Engenharia do Caos (ou *monkey testing*)__: visa deliberadamente derrubar os serviços, sem critérios arbitrários, para averiguar como a aplicação se comporta, permitindo analisar mais friamente como projetar serviços mais robustos.
+
+## Resumo
+
+- A codificação social é a codificação como uma comunidade, e os repositórios públicos e a programação em pares resultam em maior qualidade de código.
+- Trabalhar em pequenos lotes reduz o desperdício e significa entregar rapidamente algo útil ao cliente.
+- O produto mínimo viável tem a ver tanto com a entrega quanto com a criação do que o cliente realmente deseja.
+- O desenvolvimento orientado por testes consiste em escrever o teste para o código que o senhor deseja ter e, em seguida, escrever o código para que o teste seja aprovado. Isso permite que o senhor desenvolva mais rapidamente e com mais confiança.
+- O desenvolvimento orientado por comportamento concentra-se no comportamento do sistema de fora para dentro. Ele considera o sistema como um consumidor do mesmo.
+- O desenvolvimento orientado por comportamento melhora a comunicação ao usar uma sintaxe acessível que os desenvolvedores e as partes interessadas podem entender.
+- Os microsserviços são criados em torno de recursos comerciais e podem ser implantados de forma independente por máquinas de implantação totalmente automatizadas.
+- A arquitetura nativa da nuvem permite a implantação independente de microsserviços que aproveitam o dimensionamento horizontal e resultam em serviços mais resilientes.
+- A falha é inevitável, portanto, projetamos para a falha em vez de tentar evitá-la.
+- É importante aceitar as falhas e recuperar-se rapidamente quando elas ocorrerem.
