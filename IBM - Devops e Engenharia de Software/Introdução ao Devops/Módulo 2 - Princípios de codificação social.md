@@ -72,3 +72,24 @@ Estes recursos básicos podem ser utilizados para descrever qualquer recurso de 
 Além disso, o BDD é uma ferramenta que permite a implementação de uma esteira para entrega e integração contínuas do sistema, pois é possível definir, de forma não ambígua, se uma `FUNCIONALIDADE` tem ou não o comportamento esperado conforme a documentação.
 
 O BDD é uma ferramenta holística, que olha o sistema de fora para dentro, enquanto o TDD é uma ferramenta intrínseca, que testa cada `FUNCIONALIDADE` para assegurar que a mesma funciona **do jeito certo**.
+## Microsserviços Nativos da Nuvem
+
+Um sistema na arquitetura de *microservices* é um tipo de sistema onde **cada escopo do sistema é, por si só, um serviço autônomo, e não depende dos outros para se manter ativo**. Isso implica em ter um projeto para cada camada do sistema que possua um domínio distinto. Por exemplo, se imaginarmos uma arquitetura de microsserviços para um sistema de serviço de transporte particular, poderíamos ter múltiplos serviços sendo desenvolvidos de forma independente:
+
+- Um serviço de cliente (UI) para o acesso dos usuários passageiros
+- Um serviço de cliente (UI) para o acesso dos usuários motoristas
+- Um serviço de notificações do sistema
+- Um serviço de processamento de pagamentos
+- Um serviço de logística
+- Um serviço de gestão de motoristas
+- Um serviço de gestão de passageiros
+- Um serviço de cobranças
+- Um serviço de gestão das viagens
+
+Assim, cada um desses serviços se mantém ativo de forma independente, permitindo assim uma série de vantagens:
+
+- **Os serviços se comunicam por interfaces padronizadas (APIs):** *somente a saída de um serviço é relevante para outros serviços*.
+- **Os serviços são *stateless* (sem estado externo)**: cada serviço se preocupa apenas em manter o próprio estado, o que torna independente a lógica de dados entre cada serviço, permitindo a comunicação por interfaces (APIs).
+- **Modificar um serviço não requer alteração em outros serviços**: se for necessário escalar um serviço em específico, ou derrubá-lo, ou reconstruí-lo, os outros serviços não precisam passar pelo menos procedimento. Isso permite um controle granular que é dependente apenas da necessidade em específico de um serviço.
+
+Um detalhe importante é que, para abordar tal arquitetura de forma eficiente e robusta, o processo de DevOps deve pensar em esteiras de integração e entrega para cada um dos serviços.
