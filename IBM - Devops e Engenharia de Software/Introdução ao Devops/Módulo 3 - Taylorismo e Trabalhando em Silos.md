@@ -50,3 +50,33 @@ Containers são micro ambientes isolados para a execução de um serviço indivi
 Containers são imutáveis, pois se algo precisa ser alterado, não é o container que sofre essas alterações, e sim a imagem do container. Isso se dá pelo fato de que um container possui natureza efêmera: se ele não funciona ou não atende mais às necessidades do negócio, dele deve ser facilmente destruído, sendo posto outro container em seu lugar.
 
 A principal ferramenta para a criação de imagens e execução de containers é o Docker. O objetivo de um container é ser um ambiente de execução isolado, que contém somente as dependências necessárias para a execução do serviço em questão. Cada serviço deve rodar em seu próprio container.
+## Integração Contínua
+
+Integração contínua é a prática de realizar pequenas incrementações rápidas no produto. Isso significa que, a cada nova funcionalidade, melhoria ou correção desenvolvidos, nós integraremos essas alterações ao produto final, que se encontra em produção.
+
+Algumas características são determinantes para que o ambiente de desenvolvimento seja apto para a integração contínua:
+1. __Toda e qualquer alteração no código-fonte__ deve ser feita em uma *branch* paralela, também chamadas de *feature branch* (ramo de funcionalidade), onde trabalhamos exclusivamente em uma funcionalidade, correção ou melhoria específica.
+2. Todas as alterações devem ser pequenas, e devem ser enviadas diariamente a *feature branch* remota.
+3. Toda alteração enviada à *feature branch* deve ser automaticamente ser preparada e testada, através de ferramentas de monitoramento de CI (GitHub Actions).
+4. Toda *feature branch* deve ser adicionada (*merge*) a *branch* principal somente através de *pull requests* (uma solicitação para aplicar um *patch* no produto), e esta deve passar por avaliação por parte de outros membros da equipe (*code review*). 
+5. Uma *pull request* é aprovada se, e somente se, todos os testes automatizados passarem, bem como se o *code review*  for aprovado.
+## Entrega Contínua
+
+Entrega contínua (*Continuous Delivery*) consiste na prática de distribuir o produto de forma incremental e automatizada para o usuário final. Para que isto ocorra, é obrigatória a presença da Integração Contínua (*Continous Deployment*), pois assim é possível criar o que é chamado de *pipeline CI/CD* (ou esteira CI/CD). 
+
+A *pipeline CI/CD* faz com que toda incrementação no produto seja automaticamente processada em diversas etapas que testam, replicam, monitoram e controlam o produto em funcionamento. Uma das práticas de CD é a replicação de ambientes, geralmente visando espelhar o ambiente de produção (que é o ambiente onde a aplicação se encontra disponível para o usuário final).
+
+Outra prática para o *pipeline CI/CD* é o que se chama de *feature flag* (ou sinalizador de funcionalidades). No cenário ideal, **todas as funcionalidades do seu produto** podem ser ativadas ou desativadas em produção, sem nenhuma alteração de código fonte. Isso permitem uma testagem granular da aplicação, onde **a distribuição da aplicação está desacoplada de sua ativação**.
+
+# Resumo e destaques
+
+- O taylorismo foi projetado para o trabalho em fábricas e o desenvolvimento de software é personalizado, ou seja, mais parecido com um trabalho artesanal, e que trabalhar em silos leva a erros e gargalos.
+- A propriedade da equipe e as equipes estáveis tornam o desenvolvimento de software mais parecido com o desenvolvimento de produtos do que com o gerenciamento de projetos.
+- Os desenvolvedores querem inovação, enquanto as operações querem estabilidade.
+- Os comportamentos necessários do DevOps incluem propriedade compartilhada, colaboração, aceitação de mudanças e respostas orientadas por dados.
+- Infraestrutura como código é a descrição da infraestrutura em um formato textual executável.
+- A infraestrutura efêmera pode ser usada e depois descartada porque os servidores são criados sob demanda, por meio da automação, usando técnicas de Infraestrutura como Código.
+- Integração contínua é a criação, o teste e a integração de cada alteração do desenvolvedor na ramificação principal após a aprovação dos testes.
+- Os benefícios da Integração Contínua incluem um tempo de reação mais rápido, maior agilidade e redução do risco na integração do código.
+- A Entrega Contínua garante que o código possa ser implantado de forma rápida e segura na produção, entregando todas as alterações em um ambiente semelhante ao de produção.
+- Os cinco princípios da Entrega Contínua estão relacionados à qualidade, ao trabalho em pequenos lotes, à automação, à melhoria contínua e à responsabilidade compartilhada.
