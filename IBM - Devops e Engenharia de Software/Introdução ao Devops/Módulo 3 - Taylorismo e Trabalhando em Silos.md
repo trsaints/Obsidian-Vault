@@ -68,6 +68,8 @@ A *pipeline CI/CD* faz com que toda incrementação no produto seja automaticame
 
 Outra prática para o *pipeline CI/CD* é o que se chama de *feature flag* (ou sinalizador de funcionalidades). No cenário ideal, **todas as funcionalidades do seu produto** podem ser ativadas ou desativadas em produção, sem nenhuma alteração de código fonte. Isso permitem uma testagem granular da aplicação, onde **a distribuição da aplicação está desacoplada de sua ativação**.
 
+Uma característica chave da entrega contínua é: a *main branch* deve estar sempre pronta para distribuição.
+
 # Resumo e destaques
 
 - O taylorismo foi projetado para o trabalho em fábricas e o desenvolvimento de software é personalizado, ou seja, mais parecido com um trabalho artesanal, e que trabalhar em silos leva a erros e gargalos.

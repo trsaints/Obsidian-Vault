@@ -1,0 +1,4 @@
+A forma como uma organização é estruturada afeta fortemente a capacidade e possibilidade de se tornar DevOps. Uma organização que realmente visa abraçar esta cultura precisa de algumas características:
+
+1. Equipes ágeis (*agile teams*): pequenas equipes, totalmente dedicadas a um produto, com pessoas de diferentes nichos e setores, e que trabalham em um passo de cada vez (*sprints*)
+2. Equipes orientadas aos domínios de um negócio: ao invés de ter uma equipe inteira para a UI, outra equipe inteira pra a lógica da aplicação, e outra equipe inteira para administrar a camada de dados, idealmente busca-se ter pequenos times multifuncionais que estão orientados ao domínio do negócio. Por exemplo: equipe de *onboarding*; equipe de pagamentos; equipe de logística; equipe de comunicação
