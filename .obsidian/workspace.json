@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IBM - Devops e Engenharia de Software/Introdução ao Devops/Impacto Organizacional do DevOps.md",
+                "file": "IBM - Devops e Engenharia de Software/Introdução ao Devops/Módulo 4 - Impacto Organizacional do DevOps.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Impacto Organizacional do DevOps"
+              "title": "Módulo 4 - Impacto Organizacional do DevOps"
             }
           }
         ]
@@ -162,13 +162,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dfb5933f297cbe1d",
+  "active": "ff9856fd10ee2f21",
   "lastOpenFiles": [
+    "IBM - Devops e Engenharia de Software/Introdução ao Devops/Módulo 2 - Princípios de codificação social.md",
+    "IBM - Devops e Engenharia de Software/Introdução ao Devops/Módulo 4 - Impacto Organizacional do DevOps.md",
     "IBM - Devops e Engenharia de Software/Introdução ao Devops/Módulo 3 - Taylorismo e Trabalhando em Silos.md",
-    "IBM - Devops e Engenharia de Software/Introdução ao Devops/Impacto Organizacional do DevOps.md",
     "Desenvolvimento/DOTNET/Fundamentos de ASPNET Core.md",
     "Desenvolvimento/DOTNET/Fundamentos de Csharp.md",
-    "IBM - Devops e Engenharia de Software/Introdução ao Devops/Módulo 2 - Princípios de codificação social.md",
     "Desenvolvimento/DOTNET",
     "Ciência da Computação/APC II/Exercícios para desafiar os coleguinhas.md",
     "Ciência da Computação/APC II",
