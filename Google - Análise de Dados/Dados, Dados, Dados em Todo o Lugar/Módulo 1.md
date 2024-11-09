@@ -1,5 +1,4 @@
-## Modulo 1: Introdução
-
+## Transforme Dados em *Insights*
 ### Análise de Dados no Dia-a-dia
 Em nossa rotina diária, já tomamos decisões baseadas em dados: qual comida me faz bem? qual horário eu sou mais produtivo?
 
@@ -40,3 +39,16 @@ Este é um campo voltado para a automação do processamento de dados, onde um g
 Este é um campo voltado para a tomada de pequenas decisões chave com base em condições incertas. A rigorosidade dos processos é uma característica dominante da estatística.
 #### Analytics
 Este é um campo voltado para a análise estatística computacional através de ferramentas que permitem uma exploração rápida e eficiente de um grande volume de dados.
+## Compreenda o Ecossistema dos Dados
+### Origens do Processo de Análise de Dados
+As raízes do processo de análise de dados estão fundamentadas em estatística. No geral, não há frameworks que são adotados como convenção entre os analistas de dados, porém os fundamentos são altamente versáteis, conforme abordados no curso.
+
+### O que é o Ecossistema de Dados?
+É o conjunto de elementos, processos e estudos necessários para coletar, organizar e processar informações, para criar novas perguntas ou respostas para perguntas existentes. Os elementos desse ecossistema podem ser hardware, software e ferramentas aplicadas no campo dos dados.
+
+Também existe uma diferença elementar acerca de certos campos da área de dados:
+
+#### Ciência de Dados
+É um campo que aborda o processamento e compreensão do desconhecido através de uma fonte bruta de dados. Isso é necessário para se produzir novos conceitos, possíveis perguntas a serem respondidas.
+#### Análise de Dados
+É o campo que aborda o processamento e compreensão de um grande volume de dados previamente processados e tratados, a fim de produzir possíveis respostas para problemas existentes, bem como *insights* para direcionar a tomada de decisão em um determinado contexto, sendo geralmente associado aos ambientes corporativos/organizacionais.
